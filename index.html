@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Jeni ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    background: radial-gradient(circle at top, #2a0d1f, #12060d);
+    font-family: 'Playfair Display', serif;
+    overflow-x: hidden;
+}
+.scroll {
+    max-width: 900px;
+    margin: 50px auto;
+    background: linear-gradient(#fdf1e7, #f7e3cb);
+    color: #3a1c2b;
+    padding: 70px 30px;
+    border-radius: 22px;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.7);
+    transform-origin: top;
+    animation: unfold 2s ease;
+}
+@keyframes unfold {
+    from { transform: scaleY(0); opacity: 0; }
+    to { transform: scaleY(1); opacity: 1; }
+}
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.8em;
+    text-align: center;
+}
+.buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+.buttons button {
+    padding: 16px 38px;
+    font-size: 18px;
+    border-radius: 40px;
+    border: none;
+    margin: 15px;
+}
+.yes { background: #c9184a; color: white; }
+.no { background: #aaa; color: #eee; cursor: not-allowed; }
+.hidden { display: none; }
+
+.letter {
+    margin-top: 40px;
+    font-size: 1.15em;
+    line-height: 1.9;
+}
+
+.reel {
+    position: relative;
+    height: 400px;
+    margin: 70px 0;
+    overflow: hidden;
+}
+.reel img {
+    position: absolute;
+    width: 260px;
+    border-radius: 18px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+    opacity: 0;
+    animation: float 35s infinite;
+}
+@keyframes float {
+    0% { opacity: 0; transform: translateX(-400px) scale(0.8); }
+    15% { opacity: 1; }
+    50% { transform: translateX(200px) scale(1); }
+    85% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(600px) scale(0.85); }
+}
+
+.final {
+    text-align: center;
+    margin-top: 80px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+    color: #c9184a;
+}
+</style>
+</head>
+<body>
+
+<audio id="music" loop>
+    <source src="you-and-i.mp3" type="audio/mpeg">
+</audio>
+
+<div class="scroll" id="page1">
+    <h1>Will you be my Valentine?</h1>
+    <div class="buttons">
+        <button class="yes" onclick="startLove()">Yes ❤️</button>
+        <button class="no" onclick="alert('Return Jason 😌')">No</button>
+    </div>
+</div>
+
+<div class="scroll hidden" id="page2">
+    <h1>Jeni ❤️</h1>
+
+    <div class="letter">
+        <p>“அன்பு இல்லாத வாழ்க்கை உயிர் இல்லாத உடல் போன்றது.”</p>
+        <p>Jeni… உன்னை முதலில் பார்த்த அந்த நொடி, சங்கக் கவிஞர்கள் சொன்ன காதல் நிஜம் என்று தெரிந்தது.</p>
+        <p>Pappss… காதல் உன் கண்களில். காமம் உன் அருகாமையில்.</p>
+        <p>You and I… always.</p>
+    </div>
+
+    <div class="reel">
+        <img src="IMG_7035.jpeg" style="top:30px; animation-delay:0s">
+        <img src="2D5D821F-BC3F-4CC9-92CC-1D55A1A2DFE8.jpeg" style="top:80px; animation-delay:4s">
+        <img src="681F20D2-1576-4C36-93E1-B2454040F15D.jpeg" style="top:40px; animation-delay:8s">
+        <img src="6DC396FB-C6EB-4B47-9932-215DA5FF534F.jpeg" style="top:90px; animation-delay:12s">
+        <img src="72461380-0EAC-4EC6-8110-56CF280286AC.jpeg" style="top:50px; animation-delay:16s">
+        <img src="854C932E-CDF0-485B-BEBA-06B6504D4495.jpeg" style="top:70px; animation-delay:20s">
+        <img src="59A70B4D-3046-46E9-BF24-E80C10F17A22.jpeg" style="top:30px; animation-delay:24s">
+        <img src="82DECDDB-8E02-46D3-B2D5-D0255D2D7A31.jpeg" style="top:85px; animation-delay:28s">
+        <img src="672ACDA0-8E0E-4ED0-9921-B7DB20CDEDBF.jpeg" style="top:45px; animation-delay:32s">
+        <img src="F60FCEB7-EDB4-4D6E-AC83-27D4CE29C72D.jpeg" style="top:65px; animation-delay:36s">
+    </div>
+
+    <div class="final">I choose you. Every lifetime.</div>
+</div>
+
+<script>
+function startLove() {
+    document.getElementById("page1").classList.add("hidden");
+    document.getElementById("page2").classList.remove("hidden");
+    document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
